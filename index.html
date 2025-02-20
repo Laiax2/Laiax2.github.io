@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albumsito para mi amorsito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Albumsito para mi amorsito</h1>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <input type="file" id="imageInput" accept="image/*">
+            <button onclick="uploadImage()">Subir Imagen</button>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <!-- Las imágenes se agregarán aquí -->
+        </section>
+    </main>
+
+    <script>
+        function uploadImage() {
+            const input = document.getElementById('imageInput');
+            const gallery = document.getElementById('gallery');
+
+            if (input.files.length > 0) {
+                const file = input.files[0];
+                const reader = new FileReader();
+
+                reader.onload = function(event) {
+                    const img = document.createElement('img');
+                    img.src = event.target.result;
+                    img.classList.add('gallery-img');
+                    gallery.appendChild(img);
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                alert("Por favor, selecciona una imagen.");
+            }
+        }
+    </script>
+</body>
+</html>
