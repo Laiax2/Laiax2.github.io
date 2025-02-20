@@ -4,15 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Un albumsito para mi amorsito</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        .album-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos imágenes por fila */
+            gap: 15px;
+            max-width: 1000px;
+            width: 100%;
+            margin-top: 30px;
+            padding: 0 20px;
+        }
+
+        .album-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Para que las imágenes sean responsivas */
+        @media screen and (max-width: 768px) {
+            .album-container {
+                grid-template-columns: 1fr; /* Una imagen por fila en pantallas más pequeñas */
+            }
+        }
+    </style>
 </head>
 <body>
+
     <h1>Un albumsito para mi amorsito</h1>
-    <div class="gallery">
-        <div class="photo-container"><img src="imagen1.jpg" alt="Foto 1"></div>
-        <div class="photo-container"><img src="imagen2.jpg" alt="Foto 2"></div>
-        <div class="photo-container"><img src="imagen3.jpg" alt="Foto 3"></div>
-        <div class="photo-container"><img src="imagen4.jpg" alt="Foto 4"></div>
-    </div>
-</body>
-</html>
+
+    <div class="album-container">
+        <!-- Aquí se insertan las imágenes -->
+        <img src="ruta/a/tu/imagen1.jpg" alt="Imagen 1">
+        <img src="ruta/a/tu/imagen2.jpg" alt="Imagen 2">
+        <img src="ruta/a/tu/imagen3.jpg" alt="Imagen 3">
+        <img src="ruta/a/tu/imagen4.jpg" alt="Imagen 4">
+        <!-- Añade
+
