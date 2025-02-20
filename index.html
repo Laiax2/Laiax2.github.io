@@ -18,32 +18,12 @@
         </section>
 
         <section class="scrollable-gallery" id="gallery">
-            <!-- Las imágenes se agregarán aquí -->
+            <!-- Aquí se mostrarán las imágenes subidas -->
         </section>
     </main>
 
-    <script>
-        function uploadImage() {
-            const input = document.getElementById('imageInput');
-            const gallery = document.getElementById('gallery');
-
-            if (input.files.length > 0) {
-                const file = input.files[0];
-                const reader = new FileReader();
-
-                reader.onload = function(event) {
-                    const img = document.createElement('img');
-                    img.src = event.target.result;
-                    img.classList.add('gallery-img');
-                    gallery.appendChild(img);
-                };
-
-                reader.readAsDataURL(file);
-            } else {
-                alert("Por favor, selecciona una imagen.");
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
