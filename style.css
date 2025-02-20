@@ -14,24 +14,6 @@ h1 {
     color: #333;
 }
 
-#imageInput {
-    margin-top: 20px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
-
 .album-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dos imágenes por fila */
@@ -55,4 +37,3 @@ button:hover {
         grid-template-columns: 1fr; /* Una imagen por fila en pantallas más pequeñas */
     }
 }
-
